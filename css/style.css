@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.8rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  background-color: var(--very-dark-blue-main-bg);
+}
+
+main {
+  padding: 25px;
+  width: 35rem;
+  border-radius: 15px;
+  background-color: var(--very-dark-blue-card-bg);
+}
+main .image-box {
+  position: relative;
+  height: 30rem;
+  width: 30rem;
+  border-radius: 10px;
+  background-image: url("../images/image-equilibrium.jpg");
+  background-position: center;
+  background-size: cover;
+}
+main .image-box img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+main .image-box:hover .hover-image {
+  display: flex;
+}
+main .image-box .hover-image {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+  cursor: pointer;
+}
+main .image-box .hover-image img {
+  height: 6rem;
+  width: 6rem;
+}
+main h1 {
+  font-size: 2.8rem;
+  margin-top: 20px;
+  color: var(--white);
+  transition: color 0.3s;
+  cursor: pointer;
+}
+main h1:hover {
+  color: var(--cyan);
+}
+main .content-info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+main .content-info span {
+  display: flex;
+  align-items: center;
+}
+main .content-info img {
+  margin-right: 5px;
+}
+main .content-info .number {
+  color: var(--cyan);
+  font-weight: 600;
+}
+main .content-info .time {
+  color: var(--soft-blue);
+}
+main p {
+  margin-top: 20px;
+  color: var(--soft-blue);
+}
+main .author-info {
+  margin-top: 20px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--soft-blue);
+}
+main .author-info p {
+  margin-top: 0;
+}
+main .author-info img {
+  margin-right: 15px;
+  height: 4rem;
+  border: 1px solid var(--soft-blue);
+  border-radius: 50%;
+}
+main .author-info .author-name {
+  color: var(--white);
+  transition: color 0.3s;
+  cursor: pointer;
+}
+main .author-info .author-name:hover {
+  color: var(--cyan);
+}
+
+@media (min-width: 420px) {
+  main {
+    width: 40rem;
+  }
+  main .image-box {
+    height: 35rem;
+    width: 35rem;
+  }
+}/*# sourceMappingURL=style.css.map */
